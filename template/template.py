@@ -5,7 +5,7 @@ class TestReg():
     def __init__(self, content):
         self.content = content
         self.author = "cckuailong"
-        self.date = "2019/09/26"
+        self.date = "2019/09/28"
         self.name = ""
         self.website = ""
         self.category = ""
@@ -26,3 +26,6 @@ class TestReg():
 
     def verifyUsername(self):
         return False
+
+testReg = TestReg("158746007767")
+testReg.verifyCellphone()

@@ -19,19 +19,26 @@ class TestReg():
         self.usernameUrl = "https://home.51cto.com/user/check-user"
 
     def verifyCellphone(self):
-        return False
+        data = {"username": self.content, "is_ie": 0}
+        headers = {
+            "X-Requested-With": "XMLHttpRequest",
+        }
+        resp = requests.get(self.cellphoneUrl, headers=headers, params=data, verify=False)
+        if "此用户名可用" in resp.text:
+            return False
+        else:
+            return True
 
     def verifyEmail(self):
         return False
 
     def verifyUsername(self):
         data = {"username": self.content, "is_ie": 0}
-        resp = requests.get(self.usernameUrl, params=data)
-        print(resp.text)
+        headers = {
+                   "X-Requested-With": "XMLHttpRequest",
+                   }
+        resp = requests.get(self.usernameUrl, headers=headers, params=data, verify=False)
         if "此用户名可用" in resp.text:
             return False
         else:
             return True
-
-testReg = TestReg("15846007767")
-print(testReg.verifyCellphone())
