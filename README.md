@@ -1,4 +1,5 @@
-# HaveIReg
+# HaveIReg 
+[English Readme](https://github.com/cckuailong/HaveIReg/blob/master/README-en.md)
 ### 简介
 1. HaveIReg用于查找出特定用户在哪些网站注册过
 2. 用于信息收集

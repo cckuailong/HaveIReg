@@ -1,4 +1,5 @@
 # HaveIReg
+[中文 Readme](https://github.com/cckuailong/HaveIReg/blob/master/README.md)
 ### What is it
 1. HaveIReg is a tool to find out the websites which one may register.
 2. It is a fantatic tool to gather the information.
