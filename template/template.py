@@ -27,5 +27,5 @@ class TestReg():
     def verifyUsername(self):
         return False
 
-testReg = TestReg("158746007767")
+testReg = TestReg("15846007767")
 testReg.verifyCellphone()
