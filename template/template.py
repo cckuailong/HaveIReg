@@ -5,7 +5,7 @@ class TestReg():
     def __init__(self, content):
         self.content = content
         self.author = "cckuailong"
-        self.date = "2019/09/29"
+        self.date = "2019/09/30"
         self.name = ""
         self.website = ""
         self.category = ""
