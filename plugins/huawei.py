@@ -23,7 +23,10 @@ class TestReg():
     def verifyCellphone(self):
         data = {"telephoneNumber": "%2B86%20"+self.content, "method": "checkIsVerifiedPhone"}
         resp = requests.post(self.cellphoneUrl, data=data, verify=False)
-        print(resp.text)
+        if resp.text == "1":
+            return True
+        else:
+            return False
 
     def verifyEmail(self):
         data = {"email": self.content, "method": "checkEmail"}

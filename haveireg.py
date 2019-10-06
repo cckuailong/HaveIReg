@@ -1,5 +1,5 @@
 import sys, os, importlib.util
-import getopt
+import getopt, time
 
 def load_all(dir="plugins"):
     modules = []
@@ -13,24 +13,33 @@ def load_all(dir="plugins"):
             modules.append(module)
     return modules
 
-def verifyCellphone(phone, modules):
+def verifyCellphone(phone, modules, f):
     for module in modules:
         testReg = module.TestReg(phone)
         if testReg.verifyCellphone():
             print("[+] {0} {1}".format(testReg.name, testReg.website))
+            f.write("[+] {0} {1}\n".format(testReg.name, testReg.website))
+        else:
+            print("[-] {0} Not Registered".format(testReg.name))
 
 
-def verifyEmail(email, modules):
+def verifyEmail(email, modules, f):
     for module in modules:
         testReg = module.TestReg(email)
         if testReg.verifyEmail():
             print("[+] {0} {1}".format(testReg.name, testReg.website))
+            f.write("[+] {0} {1}\n".format(testReg.name, testReg.website))
+        else:
+            print("[-] {0} Not Registered".format(testReg.name))
 
-def verifyUsername(username, modules):
+def verifyUsername(username, modules, f):
     for module in modules:
         testReg = module.TestReg(username)
         if testReg.verifyUsername():
             print("[+] {0} {1}".format(testReg.name, testReg.website))
+            f.write("[+] {0} {1}\n".format(testReg.name, testReg.website))
+        else:
+            print("[-] {0} Not Registered".format(testReg.name))
 
 
 if __name__ == "__main__":
@@ -59,14 +68,17 @@ Options:
         print('Get options Error')
         print(help_show)
         sys.exit(1)
+
+    f = open('result_{0}.txt'.format(int(time.time())), 'w')
     for key, value in options:
         if key in ['-h', '--help']:
             print(help_show)
         elif key in ['-v', '--version']:
             print('HaveIReg version 0.1')
         elif key in ['-c', '--cellphone']:
-            verifyCellphone(value, modules)
+            verifyCellphone(value, modules, f)
         elif key in ['-e', '--email']:
-            verifyEmail(value, modules)
+            verifyEmail(value, modules, f)
         elif key in ['-u', '--username']:
-            verifyUsername(value, modules)
+            verifyUsername(value, modules, f)
+    f.close()

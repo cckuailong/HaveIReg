@@ -33,7 +33,3 @@ class TestReg():
 
     def verifyUsername(self):
         return False
-
-
-testReg = TestReg("346813862@qq.com")
-print(testReg.verifyEmail())
