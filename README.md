@@ -4,6 +4,10 @@
 1. HaveIReg用于查找出特定用户在哪些网站注册过
 2. 用于信息收集
 3. 可以根据三种方式进行查询（电话，邮件，昵称[用户名])
+### 安装环境
+```
+pip install -r requirements.txt
+```
 ### 使用方法
 ```
 使用: python haveireg.py [选项] [参数]

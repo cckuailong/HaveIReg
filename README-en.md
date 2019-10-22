@@ -4,6 +4,10 @@
 1. HaveIReg is a tool to find out the websites which one may register.
 2. It is a fantatic tool to gather the information.
 3. You can get info from three methods (cellphone, emial, username)
+### Install env
+```
+pip install -r requirements.txt
+```
 ### How to use it
 ```
 Usage: python haveireg.py [options] [params]
