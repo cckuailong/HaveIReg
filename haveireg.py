@@ -16,29 +16,39 @@ def load_all(dir="plugins"):
 def verifyCellphone(phone, modules, f):
     for module in modules:
         testReg = module.TestReg(phone)
-        if testReg.verifyCellphone():
-            print("[+] {0} {1}".format(testReg.name, testReg.website))
-            f.write("[+] {0} {1}\n".format(testReg.name, testReg.website))
-        else:
+        try:
+            if testReg.verifyCellphone():
+                print("[+] {0} {1}".format(testReg.name, testReg.website))
+                f.write("[+] {0} {1}\n".format(testReg.name, testReg.website))
+            else:
+                print("[-] {0} Not Registered".format(testReg.name))
+        except:
             print("[-] {0} Not Registered".format(testReg.name))
 
 
 def verifyEmail(email, modules, f):
     for module in modules:
         testReg = module.TestReg(email)
-        if testReg.verifyEmail():
-            print("[+] {0} {1}".format(testReg.name, testReg.website))
-            f.write("[+] {0} {1}\n".format(testReg.name, testReg.website))
-        else:
+        try:
+            if testReg.verifyEmail():
+                print("[+] {0} {1}".format(testReg.name, testReg.website))
+                f.write("[+] {0} {1}\n".format(testReg.name, testReg.website))
+            else:
+                print("[-] {0} Not Registered".format(testReg.name))
+        except:
             print("[-] {0} Not Registered".format(testReg.name))
+
 
 def verifyUsername(username, modules, f):
     for module in modules:
         testReg = module.TestReg(username)
-        if testReg.verifyUsername():
-            print("[+] {0} {1}".format(testReg.name, testReg.website))
-            f.write("[+] {0} {1}\n".format(testReg.name, testReg.website))
-        else:
+        try:
+            if testReg.verifyUsername():
+                print("[+] {0} {1}".format(testReg.name, testReg.website))
+                f.write("[+] {0} {1}\n".format(testReg.name, testReg.website))
+            else:
+                print("[-] {0} Not Registered".format(testReg.name))
+        except:
             print("[-] {0} Not Registered".format(testReg.name))
 
 

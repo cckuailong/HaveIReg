@@ -31,7 +31,6 @@ class TestReg():
     def verifyEmail(self):
         data = {"value": self.content, "type": "useremail"}
         resp = requests.get(self.emailUrl, params=data, verify=False)
-        print(resp.text)
         if "\"result\":1" in resp.text:
             return True
         else:

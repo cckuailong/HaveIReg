@@ -29,7 +29,7 @@ class TestReg():
 
     def verifyUsername(self):
         data = {"nickName": self.content}
-        resp = requests.get(self.usernameUrl, params=data, verify=False)
+        resp = requests.get(self.usernameUrl, params=data, verify=False, timeout=3)
         try:
             res = json.loads(resp.text)
         except:
