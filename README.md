@@ -1,17 +1,25 @@
 # HaveIReg 
+
 [English Readme](https://github.com/cckuailong/HaveIReg/blob/master/README-en.md)
-### 简介
-1. HaveIReg用于查找出特定用户在哪些网站注册过
-2. 用于信息收集
-3. 可以根据三种方式进行查询（电话，邮件，昵称[用户名])
-### 安装环境
+
+## 简介
+
+- HaveIReg用于查找出特定用户在哪些网站注册过
+- 用于信息收集
+- 可以根据三种方式进行查询（电话，邮件，昵称[用户名])
+
+## 安装环境
+
 ```
 pip install -r requirements.txt
 ```
-### 使用方法
+
+## 使用方法
+
 ```
 使用: python haveireg.py [选项] [参数]
 ```
+
 ```
 选项:
   -v, --version     显示版本
@@ -23,5 +31,7 @@ pip install -r requirements.txt
   -u, --username    根据用户名查找
                     E.g. python haveireg.py -u Robert 
 ```
-### 附
+
+## 附
+
 HaveIReg支持插件化操作，用户可以根据template/template.py模板，加入自定义的插件到Plugins中

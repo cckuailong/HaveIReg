@@ -1,17 +1,25 @@
 # HaveIReg
+
 [中文 Readme](https://github.com/cckuailong/HaveIReg/blob/master/README.md)
-### What is it
-1. HaveIReg is a tool to find out the websites which one may register.
-2. It is a fantatic tool to gather the information.
-3. You can get info from three methods (cellphone, emial, username)
-### Install env
+
+## What is it
+
+- HaveIReg is a tool to find out the websites which one may register.
+- It is a fantatic tool to gather the information.
+- You can get info from three methods (cellphone, emial, username)
+
+## Install env
+
 ```
 pip install -r requirements.txt
 ```
-### How to use it
+
+## How to use it
+
 ```
 Usage: python haveireg.py [options] [params]
 ```
+
 ```
 Options:
   -v, --version     Show the version of HaveIReg
@@ -23,6 +31,8 @@ Options:
   -u, --username    Search with username
                     E.g. python haveireg.py -u Robert 
 ```
-### What's more
+
+## What's more
+
 It is a tool with plugin. You can customize your own plugin
 to search following the models of template/template.py
